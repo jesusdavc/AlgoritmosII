@@ -60,16 +60,46 @@ public class Main {
             array[j+1] = temp;
 
         }
+
+    }
+
+    public static Integer Partition(Integer[] array, Integer low, Integer high){
+        int x = array[high];
+        int i = low ;
+        for (int j = low; j < high ; j++){
+            if(array[j] <= x){
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+                i = i + 1;
+            }
+        }
+        int temp2 = array[i];
+        array[i] = array[high];
+        array[high] = temp2;
+        return i;
+    }
+
+    public static void quickSort(Integer[] array, Integer low, Integer high){
+        if (low < high){
+            int q = Partition(array,low,high);
+            quickSort(array,low,q-1);
+            quickSort(array,q+1,high);
+        }
     }
     public static void main(String[] args) {
         Integer[] A = { 12, 14, 13, 5, 6, 7 };
         Integer[] B = { 12, 14, 13, 5, 6, 7 };
+        Integer[] C = { 12, 14, 13, 5, 6, 7 };
+
 
 
         mergeSort(A,0,A.length-1);
         InsertionSort(B);
+        quickSort(C,0,C.length-1);
 
         System.out.println(Arrays.asList(A));
         System.out.println(Arrays.asList(B));
+        System.out.println(Arrays.asList(C));
     }
 }
