@@ -113,6 +113,9 @@ public class Main {
         System.out.println("Execution Time Insertion " + (timeEndInsertion - timeStartInsertion));
 
         System.out.println(Arrays.asList(C));
+
         System.out.println("Execution Time QuickSort " + (timeEndQuickSort - timeStartQuickSort));
+
+
     }
 }
