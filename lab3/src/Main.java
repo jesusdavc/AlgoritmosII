@@ -94,12 +94,25 @@ public class Main {
         Integer[] B = { 12, 14, 13, 5, 6, 7, 3,55,66,17,23,68, 44, 46, 101, 500, 1 };
         Integer[] C = { 12, 14, 13, 5, 6, 7, 3,55,66,17,23,68, 44, 46, 101, 500, 1 };
 
+        long timeStartMerge = System.nanoTime();
         mergeSort(A,0,A.length-1);
+        long timeEndMerge = System.nanoTime();
+
+        long timeStartInsertion = System.nanoTime();
         InsertionSort(B);
+        long timeEndInsertion = System.nanoTime();
+
+        long timeStartQuickSort = System.nanoTime();
         quickSort(C,0,C.length-1);
+        long timeEndQuickSort = System.nanoTime();
 
         System.out.println(Arrays.asList(A));
+        System.out.println("Execution Time Merge " + (timeEndMerge - timeStartMerge));
+
         System.out.println(Arrays.asList(B));
+        System.out.println("Execution Time Insertion " + (timeEndInsertion - timeStartInsertion));
+
         System.out.println(Arrays.asList(C));
+        System.out.println("Execution Time QuickSort" + (timeEndQuickSort - timeStartQuickSort));
     }
 }
