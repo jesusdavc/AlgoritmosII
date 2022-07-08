@@ -53,8 +53,9 @@ public class Main {
 
             int j = i-1;
 
-            for(int m = j; m>=0 && array[m] > temp; m-- ){
-                array[m+1] = array[m];
+            while(j>=0 && (array[j] > temp)){
+                array[j+1] = array[j];
+                j--;
             }
             array[j+1] = temp;
 
