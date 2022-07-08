@@ -1,5 +1,6 @@
 import java.util.Arrays;
 public class Main {
+    //MergeSort
     public static void merge(Integer[] mainArray , int low, int middle, int high){
         //Sizes temporal arrays
         int length1 = middle - low + 1;
@@ -47,6 +48,7 @@ public class Main {
 
         }
     }
+    //InsertionSort
     public static void InsertionSort(Integer[] array){
         for (int i=0; i < array.length ; i++ ){
             int temp = array[i];
@@ -62,7 +64,7 @@ public class Main {
         }
 
     }
-
+    //QuickSort
     public static Integer Partition(Integer[] array, Integer low, Integer high){
         int x = array[high];
         int i = low ;
@@ -88,11 +90,9 @@ public class Main {
         }
     }
     public static void main(String[] args) {
-        Integer[] A = { 12, 14, 13, 5, 6, 7 };
-        Integer[] B = { 12, 14, 13, 5, 6, 7 };
-        Integer[] C = { 12, 14, 13, 5, 6, 7 };
-
-
+        Integer[] A = { 12, 14, 13, 5, 6, 7, 3,55,66,17,23,68, 44, 46, 101, 500, 1 };
+        Integer[] B = { 12, 14, 13, 5, 6, 7, 3,55,66,17,23,68, 44, 46, 101, 500, 1 };
+        Integer[] C = { 12, 14, 13, 5, 6, 7, 3,55,66,17,23,68, 44, 46, 101, 500, 1 };
 
         mergeSort(A,0,A.length-1);
         InsertionSort(B);
