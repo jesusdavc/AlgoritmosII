@@ -1,0 +1,9 @@
+Observamos que los tiempos de ejecución varian unos a otros.
+Donde el menor tiempo lo tiene el InsertionSort con 11.5 ms,
+después QuickSort con 27.4 ms y de último Merge con 50.8ms. (Aunque el tiempo puede variar)
+
+Sabemos que Insertion tiene como complejidad O(n^2) en el mejor caso y Merge O(nlogn) en el mejor caso.
+Por otra parte, QuickSort tiene como complejidad O(nlogn) como promedio y 0(n^2) como peor por lo que en
+la mayoría de los casos la ejecución de los algoritmos tendrá este orden Insertion, QuickSort, MergeSort.
+
+
