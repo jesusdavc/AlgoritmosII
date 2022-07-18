@@ -23,7 +23,7 @@ public class Main {
         }
     }
     public static void fillNextArrayCircular(int lengthArray, ArrayList<Object> next ){
-        //Llena el array de manera que el último nodo es el primero
+        //Llena el array de manera que el último nodo es el primero, lo llena basándose en el orden del atributo ID
         for (int i = 0; i< lengthArray; i++){
             if ( i != lengthArray -1){
                 next.add(i+1);
@@ -33,6 +33,7 @@ public class Main {
         }
     }
     public static void itsCircular(ArrayList<Object> next, int head){
+        //verifica si la lista es circular (cyclical)
         boolean itsTrue = true;
         for (int i = head; i < next.size() ; i++) {
             if(next.get(i) == null){
